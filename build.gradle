@@ -28,7 +28,13 @@ processResources {
 
 
 dependencies {
-	compile('org.neo4j.driver:neo4j-java-driver:1.5.1')
+//	compile('org.neo4j.driver:neo4j-java-driver:1.5.1')
+
+
+	compile('org.neo4j:neo4j-ogm-core:3.0.2')
+	compile('org.neo4j:neo4j-ogm-bolt-driver:3.0.2')
+
+
 
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
