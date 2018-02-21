@@ -5,6 +5,7 @@ import org.neo4j.ogm.annotation.RelationshipEntity;
 import org.neo4j.ogm.annotation.StartNode;
 import org.neo4j.ogm.annotation.typeconversion.DateLong;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 @RelationshipEntity( type = "KNOWS" )

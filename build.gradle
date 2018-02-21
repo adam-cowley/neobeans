@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.10.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = '1.5.10.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'java'
@@ -19,23 +19,23 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 processResources {
-	expand(project.properties)
+    expand(project.properties)
 }
 
 
 dependencies {
-//	compile('org.neo4j.driver:neo4j-java-driver:1.5.1')
+    compile('org.neo4j.driver:neo4j-java-driver:1.5.1')
 
 
-	compile('org.neo4j:neo4j-ogm-core:3.0.2')
-	compile('org.neo4j:neo4j-ogm-bolt-driver:3.0.2')
+    compile('org.neo4j:neo4j-ogm-core:3.0.1')
+    compile('org.neo4j:neo4j-ogm-api:3.0.1')
+    compile('org.neo4j:neo4j-ogm-bolt-driver:3.0.1')
 
 
-
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
 }
